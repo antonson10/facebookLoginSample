@@ -12,6 +12,10 @@
 		D9A67CCE1EA4FD5B00CE2186 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A67CCC1EA4FD5B00CE2186 /* Main.storyboard */; };
 		D9A67CD01EA4FD5B00CE2186 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A67CCF1EA4FD5B00CE2186 /* Assets.xcassets */; };
 		D9A67CD31EA4FD5B00CE2186 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A67CD11EA4FD5B00CE2186 /* LaunchScreen.storyboard */; };
+		D9A67CDF1EA5021D00CE2186 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A67CDB1EA5021D00CE2186 /* Bolts.framework */; };
+		D9A67CE01EA5021D00CE2186 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A67CDC1EA5021D00CE2186 /* FBSDKCoreKit.framework */; };
+		D9A67CE11EA5021D00CE2186 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A67CDD1EA5021D00CE2186 /* FBSDKLoginKit.framework */; };
+		D9A67CE21EA5021D00CE2186 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A67CDE1EA5021D00CE2186 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		D9A67CCF1EA4FD5B00CE2186 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9A67CD21EA4FD5B00CE2186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9A67CD41EA4FD5B00CE2186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9A67CDB1EA5021D00CE2186 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "FacebookSDKs-iOS-4/Bolts.framework"; sourceTree = "<group>"; };
+		D9A67CDC1EA5021D00CE2186 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "FacebookSDKs-iOS-4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		D9A67CDD1EA5021D00CE2186 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "FacebookSDKs-iOS-4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		D9A67CDE1EA5021D00CE2186 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "FacebookSDKs-iOS-4/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9A67CE21EA5021D00CE2186 /* FBSDKShareKit.framework in Frameworks */,
+				D9A67CDF1EA5021D00CE2186 /* Bolts.framework in Frameworks */,
+				D9A67CE01EA5021D00CE2186 /* FBSDKCoreKit.framework in Frameworks */,
+				D9A67CE11EA5021D00CE2186 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				D9A67CC71EA4FD5B00CE2186 /* facebookLogin */,
+				D9A67CDA1EA501B200CE2186 /* frameworks */,
 				D9A67CC61EA4FD5B00CE2186 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +75,17 @@
 				D9A67CD41EA4FD5B00CE2186 /* Info.plist */,
 			);
 			path = facebookLogin;
+			sourceTree = "<group>";
+		};
+		D9A67CDA1EA501B200CE2186 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9A67CDB1EA5021D00CE2186 /* Bolts.framework */,
+				D9A67CDC1EA5021D00CE2186 /* FBSDKCoreKit.framework */,
+				D9A67CDD1EA5021D00CE2186 /* FBSDKLoginKit.framework */,
+				D9A67CDE1EA5021D00CE2186 /* FBSDKShareKit.framework */,
+			);
+			name = frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +284,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M5GZ67J83W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookSDKs-iOS-4",
+				);
 				INFOPLIST_FILE = facebookLogin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.antonson10.nf.facebookLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,7 +302,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M5GZ67J83W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookSDKs-iOS-4",
+				);
 				INFOPLIST_FILE = facebookLogin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.antonson10.nf.facebookLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
